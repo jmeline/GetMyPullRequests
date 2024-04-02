@@ -1,7 +1,9 @@
 const token = process.env.GITHUB_TOKEN || ''
 if (!token) throw new Error('GITHUB_TOKEN is required')
 
-const username = '<github-username>'
+const username = process.env.GITHUB_USERNAME || ''
+if (!username) throw new Error('GITHUB_USERNAME is required')
+
 const startDate = "2023-04-01"
 const endDate = "2024-04-30"
 const headers = {
